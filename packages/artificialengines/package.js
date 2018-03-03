@@ -8,7 +8,8 @@ Npm.depends({
   stripe: '5.1.1',
   patreon: '0.3.0',
   'tumblr.js': '1.1.1',
-  'path-to-regexp': '2.1.0'
+  'path-to-regexp': '2.1.0',
+  'raven-js': '3.23.1'
 });
 
 Package.onUse(function(api) {
@@ -167,6 +168,8 @@ Package.onUse(function(api) {
   api.addServerFile('telepathy/stripe-server');
   api.addServerFile('telepathy/patreon-server');
   api.addServerFile('telepathy/tumblr-server');
+  api.addServerFile('telepathy/sentry/server');
+  api.addClientFile('telepathy/sentry/client');
 
   // Artificial Babel
   api.addFile('babel/babel');
